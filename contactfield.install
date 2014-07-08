@@ -1,0 +1,147 @@
+<?php
+
+/**
+ * Implements hook_field_schema()
+ */
+function contactfield_field_schema() {
+  $columns = array(
+    'country' => array(
+      'description' => 'Two letter ISO country code of this contact.',
+      'type' => 'varchar',
+      'length' => 2,
+      'not null' => FALSE,
+      'default' => '',
+    ),
+    'administrative_area' => array(
+      'description' => 'The administrative area of this contact. (i.e. State/Province)',
+      'type' => 'varchar',
+      'length' => 255,
+      'default' => '',
+      'not null' => FALSE,
+    ),
+    'sub_administrative_area' => array(
+      'description' => 'The sub administrative area of this contact.',
+      'type' => 'varchar',
+      'length' => 255,
+      'default' => '',
+      'not null' => FALSE,
+    ),
+    'locality' => array(
+      'description' => 'The locality of this contact. (i.e. City)',
+      'type' => 'varchar',
+      'length' => 255,
+      'default' => '',
+      'not null' => FALSE,
+    ),
+    'dependent_locality' => array(
+      'description' => 'The dependent locality of this contact.',
+      'type' => 'varchar',
+      'length' => 255,
+      'default' => '',
+      'not null' => FALSE,
+    ),
+    'postal_code' => array(
+      'description' => 'The postal code of this contact.',
+      'type' => 'varchar',
+      'length' => 255,
+      'default' => '',
+      'not null' => FALSE,
+    ),
+    'thoroughfare' => array(
+      'description' => 'The thoroughfare of this contact. (i.e. Street contact)',
+      'type' => 'varchar',
+      'length' => 255,
+      'default' => '',
+      'not null' => FALSE,
+    ),
+    'premise' => array(
+      'description' => 'The premise of this contact. (i.e. Apartment / Suite number)',
+      'type' => 'varchar',
+      'length' => 255,
+      'default' => '',
+      'not null' => FALSE,
+    ),
+    'sub_premise' => array(
+      'description' => 'The sub_premise of this contact.',
+      'type' => 'varchar',
+      'length' => 255,
+      'default' => '',
+      'not null' => FALSE,
+    ),
+    'organisation_name' => array(
+      'description' => 'Contents of a primary OrganisationName element in the xNL XML.',
+      'type' => 'varchar',
+      'length' => 255,
+      'not null' => FALSE,
+      'default' => '',
+    ),
+    'name_line' => array(
+      'description' => 'Contents of a primary NameLine element in the xNL XML.',
+      'type' => 'varchar',
+      'length' => 255,
+      'not null' => FALSE,
+      'default' => '',
+    ),
+    'first_name' => array(
+      'description' => 'Contents of the FirstName element of a primary PersonName element in the xNL XML.',
+      'type' => 'varchar',
+      'length' => 255,
+      'not null' => FALSE,
+      'default' => '',
+    ),
+    'last_name' => array(
+      'description' => 'Contents of the LastName element of a primary PersonName element in the xNL XML.',
+      'type' => 'varchar',
+      'length' => 255,
+      'not null' => FALSE,
+      'default' => '',
+    ),
+    'phone_number' => array(
+      'description' => 'Primary phone number.',
+      'type' => 'varchar',
+      'length' => 255,
+      'not null' => FALSE,
+      'default' => '',
+    ),
+    'phone_extension' => array(
+      'description' => 'Primary phone number extension.',
+      'type' => 'varchar',
+      'length' => 255,
+      'not null' => FALSE,
+      'default' => '',
+    ),
+    'mobile_number' => array(
+      'description' => 'Mobile number.',
+      'type' => 'varchar',
+      'length' => 255,
+      'not null' => FALSE,
+      'default' => '',
+    ),
+    'fax_number' => array(
+      'description' => 'Fax number.',
+      'type' => 'varchar',
+      'length' => 255,
+      'not null' => FALSE,
+      'default' => '',
+    ),
+    'email' => array(
+      'description' => 'Email address.',
+      'type' => 'varchar',
+      'length' => 255,
+      'not null' => FALSE,
+      'default' => '',
+    ),
+    'data' => array(
+      'description' => 'Additional data for this contact.',
+      'type' => 'text',
+      'size' => 'big',
+      'not null' => FALSE,
+      'serialize' => TRUE,
+    ),
+  );
+
+  return array(
+    'columns' => $columns,
+    // TODO Add indexes.
+  );
+}

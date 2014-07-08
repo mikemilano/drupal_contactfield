@@ -1,0 +1,26 @@
+.contactfield-container-inline > div.form-item {
+  float: left;
+  margin-right: 1em;
+}
+
+.contactfield-container-inline.country-GB > div.form-item {
+  float: none;
+  margin-right: auto;
+}
+
+/* Clear-fix markup for the inline container */
+.contactfield-container-inline:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+/* IE6 */
+* html .contactfield-container-inline {
+  height: 1%;
+}
+/* IE7 */
+*:first-child + html .contactfield-container-inline {
+  min-height: 1%;
+}

@@ -1,0 +1,12 @@
+name = Contact Field
+description = Manage a flexible contact field, implementing the xNAL standard.
+core = 7.x
+package = Fields
+
+dependencies[] = ctools
+
+files[] = views/contactfield_views_handler_filter_country.inc
+
+version = "7.x-1.0"
+core = "7.x"
+project = "contactfield"
